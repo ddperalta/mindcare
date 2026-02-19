@@ -1,0 +1,1318 @@
+[
+  {
+    "id": "bdi-ii",
+    "title": "BDI-II - Inventario de Depresión de Beck",
+    "description": "Evaluación de síntomas de depresión moderada a severa. Contiene 21 categorías de síntomas.",
+    "instructions": "Lea cada grupo de afirmaciones y seleccione la opción que mejor describa cómo se ha sentido en las últimas 2 semanas, incluyendo hoy.",
+    "category": "Depresión",
+    "questions": [
+      {
+        "id": "bdi_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tristeza",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No me siento triste", "value": 0 },
+          { "id": "1", "text": "Me siento triste gran parte del tiempo", "value": 1 },
+          { "id": "2", "text": "Me siento triste todo el tiempo", "value": 2 },
+          { "id": "3", "text": "Me siento tan triste o infeliz que no puedo soportarlo", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Pesimismo",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No estoy desanimado respecto al futuro", "value": 0 },
+          { "id": "1", "text": "Me siento más desanimado que antes respecto al futuro", "value": 1 },
+          { "id": "2", "text": "No espero que las cosas mejoren", "value": 2 },
+          { "id": "3", "text": "Siento que mi futuro es desesperanzado y no mejorará", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Fracaso",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No me siento como un fracasado", "value": 0 },
+          { "id": "1", "text": "He fracasado más de lo que debería", "value": 1 },
+          { "id": "2", "text": "Cuando miro hacia atrás, veo muchos fracasos", "value": 2 },
+          { "id": "3", "text": "Siento que soy un fracasado total", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Pérdida de placer",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Disfruto de las cosas como siempre", "value": 0 },
+          { "id": "1", "text": "No disfruto de las cosas como antes", "value": 1 },
+          { "id": "2", "text": "Obtengo muy poco placer de las cosas", "value": 2 },
+          { "id": "3", "text": "No puedo obtener placer de nada", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Sentimientos de culpa",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No me siento particularmente culpable", "value": 0 },
+          { "id": "1", "text": "Me siento culpable respecto a muchas cosas", "value": 1 },
+          { "id": "2", "text": "Me siento culpable la mayor parte del tiempo", "value": 2 },
+          { "id": "3", "text": "Me siento culpable todo el tiempo", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Sentimientos de castigo",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No siento que estoy siendo castigado", "value": 0 },
+          { "id": "1", "text": "Siento que puedo ser castigado", "value": 1 },
+          { "id": "2", "text": "Espero ser castigado", "value": 2 },
+          { "id": "3", "text": "Siento que estoy siendo castigado", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Disconformidad con uno mismo",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Siento lo mismo respecto a mí mismo", "value": 0 },
+          { "id": "1", "text": "He perdido confianza en mí mismo", "value": 1 },
+          { "id": "2", "text": "Estoy decepcionado conmigo mismo", "value": 2 },
+          { "id": "3", "text": "No me gusto en absoluto", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q8",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Autocrítica",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No me critico ni me culpo más de lo habitual", "value": 0 },
+          { "id": "1", "text": "Me critico más de lo habitual", "value": 1 },
+          { "id": "2", "text": "Me critico por todo lo malo que me pasa", "value": 2 },
+          { "id": "3", "text": "Me siento culpable de todo lo malo que sucede", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q9",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Pensamientos suicidas",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No tengo pensamientos de hacerme daño", "value": 0 },
+          { "id": "1", "text": "Tengo pensamientos de hacerme daño pero no los llevaré a cabo", "value": 1 },
+          { "id": "2", "text": "Siento que estaría mejor muerto", "value": 2 },
+          { "id": "3", "text": "Tengo pensamientos definitivos de suicidio", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q10",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Llanto",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No lloro más de lo habitual", "value": 0 },
+          { "id": "1", "text": "Lloro más de lo habitual", "value": 1 },
+          { "id": "2", "text": "Lloro por cualquier cosa", "value": 2 },
+          { "id": "3", "text": "Siento que necesito llorar pero no puedo", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q11",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Agitación",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No estoy más inquieto de lo habitual", "value": 0 },
+          { "id": "1", "text": "Me siento más inquieto que antes", "value": 1 },
+          { "id": "2", "text": "Estoy tan inquieto que me cuesta estar tranquilo", "value": 2 },
+          { "id": "3", "text": "Estoy tan inquieto que tengo que estar siempre en movimiento", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q12",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Pérdida de interés",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No he perdido interés en otras personas", "value": 0 },
+          { "id": "1", "text": "Estoy menos interesado que antes", "value": 1 },
+          { "id": "2", "text": "He perdido casi todo el interés en otras personas", "value": 2 },
+          { "id": "3", "text": "He perdido todo el interés en otras personas", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q13",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Indecisión",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Tomo mis propias decisiones sin dificultades", "value": 0 },
+          { "id": "1", "text": "Me cuesta más de lo habitual tomar decisiones", "value": 1 },
+          { "id": "2", "text": "Me cuesta mucho tomar decisiones", "value": 2 },
+          { "id": "3", "text": "No puedo tomar ninguna decisión", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q14",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Desvalorización",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Siento que valgo tanto como cualquiera", "value": 0 },
+          { "id": "1", "text": "Me siento inferior a los demás", "value": 1 },
+          { "id": "2", "text": "Siento que no valgo nada", "value": 2 },
+          { "id": "3", "text": "Siento que no valgo nada en absoluto", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q15",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Pérdida de energía",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Tengo tanta energía como siempre", "value": 0 },
+          { "id": "1", "text": "Tengo menos energía que antes", "value": 1 },
+          { "id": "2", "text": "No tengo suficiente energía para hacer muchas cosas", "value": 2 },
+          { "id": "3", "text": "No tengo energía para hacer nada", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q16",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cambios en el patrón de sueño",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Mi sueño es como siempre", "value": 0 },
+          { "id": "1", "text": "Duermo un poco más o menos de lo habitual", "value": 1 },
+          { "id": "2", "text": "Duermo mucho más o mucho menos de lo habitual", "value": 2 },
+          { "id": "3", "text": "Duermo casi todo el día o no duermo en absoluto", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q17",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Irritabilidad",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No estoy más irritable de lo habitual", "value": 0 },
+          { "id": "1", "text": "Estoy más irritable de lo habitual", "value": 1 },
+          { "id": "2", "text": "Estoy mucho más irritable de lo habitual", "value": 2 },
+          { "id": "3", "text": "Estoy irritable todo el tiempo", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q18",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cambios en el apetito",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Mi apetito es como siempre", "value": 0 },
+          { "id": "1", "text": "Mi apetito es un poco menor o mayor", "value": 1 },
+          { "id": "2", "text": "Mi apetito es mucho menor o mayor", "value": 2 },
+          { "id": "3", "text": "No tengo apetito en absoluto o como todo el tiempo", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q19",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Dificultad de concentración",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Puedo concentrarme tan bien como siempre", "value": 0 },
+          { "id": "1", "text": "No puedo concentrarme tan bien como antes", "value": 1 },
+          { "id": "2", "text": "Me cuesta mucho concentrarme", "value": 2 },
+          { "id": "3", "text": "No puedo concentrarme en nada", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q20",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cansancio o fatiga",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No estoy más cansado de lo habitual", "value": 0 },
+          { "id": "1", "text": "Me canso más fácilmente que antes", "value": 1 },
+          { "id": "2", "text": "Me canso de hacer cualquier cosa", "value": 2 },
+          { "id": "3", "text": "Estoy demasiado cansado para hacer algo", "value": 3 }
+        ]
+      },
+      {
+        "id": "bdi_q21",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Pérdida de interés sexual",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Mi interés sexual es igual que siempre", "value": 0 },
+          { "id": "1", "text": "Estoy menos interesado en el sexo", "value": 1 },
+          { "id": "2", "text": "Estoy mucho menos interesado", "value": 2 },
+          { "id": "3", "text": "He perdido completamente el interés sexual", "value": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gad7",
+    "title": "GAD-7 - Escala de Ansiedad Generalizada",
+    "description": "Cuestionario autoadministrable de 7 ítems para detección de ansiedad generalizada.",
+    "instructions": "Durante las últimas 2 semanas, ¿con qué frecuencia ha experimentado los siguientes problemas?",
+    "category": "Ansiedad",
+    "questions": [
+      {
+        "id": "gad_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Sentirse nervioso, ansioso o irritable",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "gad_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "No ser capaz de controlar o dejar de preocuparse",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "gad_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Preocuparse demasiado por diferentes cosas",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "gad_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tener dificultades para relajarse",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "gad_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Estar tan inquieto que es difícil mantenerse quieto",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "gad_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Sentirse irritado con facilidad",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "gad_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tener miedo como si algo terrible pudiera pasar",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "phq9",
+    "title": "PHQ-9 - Cuestionario de Salud del Paciente",
+    "description": "Cuestionario de 9 ítems para detección y medición de la severidad de la depresión.",
+    "instructions": "Durante las últimas 2 semanas, ¿con qué frecuencia ha tenido los siguientes problemas?",
+    "category": "Depresión",
+    "questions": [
+      {
+        "id": "phq_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Poco interés o placer en hacer cosas",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Sentirse decaído, deprimido o sin esperanza",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tener problemas para dormirse o mantenerse dormido, o dormir demasiado",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Sentirse cansado o tener poca energía",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tener poco apetito o comer en exceso",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Sentirse mal consigo mismo - que es un fracasado o que ha defraudado a su familia",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tener problemas para concentrarse en cosas como leer el periódico o ver la televisión",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q8",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Moverse o hablar tan lentamente que otras personas podrían notarlo. O lo contrario - estar tan inquieto que se mueve más de lo habitual",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      },
+      {
+        "id": "phq_q9",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Pensamientos de que sería mejor estar muerto o de hacerse daño de alguna manera",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "No en absoluto", "value": 0 },
+          { "id": "1", "text": "Varios días", "value": 1 },
+          { "id": "2", "text": "Más de la mitad de los días", "value": 2 },
+          { "id": "3", "text": "Casi todos los días", "value": 3 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oq45",
+    "title": "OQ-45 - Cuestionario de Evaluación de Resultados en Psicoterapia",
+    "description": "Instrumento de 45 ítems para medir el progreso y los resultados en psicoterapia. Evalúa tres áreas: malestar de síntomas, relaciones interpersonales y rol social.",
+    "instructions": "Las siguientes afirmaciones describen cómo se ha sentido en la última semana. Lea cada una y seleccione la opción que mejor describa su experiencia.",
+    "category": "Resultado terapéutico",
+    "questions": [
+      {
+        "id": "oq_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento abrumado/a",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Siento que mi futuro es desesperanzador",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento solo/a",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tengo dificultades para desempeñar mi trabajo o tareas escolares",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento irritable",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento nervioso/a",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tengo problemas para relacionarme con los demás",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q8",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Siento que mi vida tiene propósito",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q9",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento deprimido/a",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      },
+      {
+        "id": "oq_q10",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tengo pensamientos de hacerme daño",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Rara vez", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "Casi siempre", "value": 4 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ryff",
+    "title": "Ryff - Escala de Bienestar Psicológico",
+    "description": "Escala de 39 ítems que evalúa el bienestar psicológico a través de seis dimensiones: autoaceptación, autonomía, crecimiento personal, propósito en vida, relaciones positivas con otros y dominio ambiental.",
+    "instructions": "A continuación encontrará una serie de afirmaciones sobre cómo se siente respecto a diferentes aspectos de su vida. Indique grado de acuerdo o desacuerdo con cada una.",
+    "category": "Bienestar",
+    "questions": [
+      {
+        "id": "ryff_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando repaso mi vida, me siento satisfecho/a conmigo mismo/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "A menudo me siento solo/a porque tengo pocos amigos/as íntimos/as",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "En general, siento que tengo control sobre las situaciones de mi vida",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Siento que sigo desarrollando como persona",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Siento que mi vida tiene un propósito",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Soy capaz de tomar mis propias decisiones sin depender demasiado de los demás",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tengo personas cercanas que me apoyan",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q8",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento competente para manejar los problemas de mi vida",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q9",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento bien conmigo mismo/a tal como soy",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      },
+      {
+        "id": "ryff_q10",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tengo una actitud positiva hacia mi futuro",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Totalmente en desacuerdo", "value": 1 },
+          { "id": "2", "text": "En desacuerdo", "value": 2 },
+          { "id": "3", "text": "Ligeramente en desacuerdo", "value": 3 },
+          { "id": "4", "text": "Neutral", "value": 4 },
+          { "id": "5", "text": "Ligeramente de acuerdo", "value": 5 },
+          { "id": "6", "text": "De acuerdo", "value": 6 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ders18",
+    "title": "DERS-18 - Escala de Dificultades en la Regulación Emocional",
+    "description": "Cuestionario de 18 ítems que evalúa las dificultades en la regulación emocional en seis dimensiones: no aceptación de respuestas emocionales, dificultad para involucrarse en conductas orientadas a metas, dificultades para controlar impulsos, acceso limitado a estrategias de regulación emocional, falta de conciencia emocional y falta de claridad emocional.",
+    "instructions": "Por favor indique con qué frecuencia cada afirmación applies a usted usando la siguiente escala.",
+    "category": "Regulación emocional",
+    "questions": [
+      {
+        "id": "ders_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento triste, me cuesta trabajo pensar en otra cosa",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Me siento confundido/a sobre lo que siento",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento emocionalmente afectado/a, tengo dificultades para hacer las tareas que necesito hacer",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento frustrado/a, me enojo conmigo mismo/a por sentirme así",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento emocionalmente afectado/a, tengo dificultades para concentrarme",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento emocionalmente afectado/a, me siento fuera de control",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento triste, me cuesta trabajo disfrutar de las cosas",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q8",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento emocionalmente afectado/a, creo que mis sentimientos son válidos e importantes",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q9",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento enojado/a, me cuesta trabajo ver las cosas desde otra perspectiva",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      },
+      {
+        "id": "ders_q10",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Cuando me siento emocionalmente afectado/a, me siento avergonzado/a de mis emociones",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "A veces", "value": 2 },
+          { "id": "3", "text": "Acerca de la mitad del tiempo", "value": 3 },
+          { "id": "4", "text": "Frecuentemente", "value": 4 },
+          { "id": "5", "text": "Casi siempre", "value": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "panas",
+    "title": "PANAS - Escala de Afecto Positivo y Negativo",
+    "description": "Cuestionario de 20 ítems que evalúa dos dimensiones del estado de ánimo: afecto positivo (10 ítems) y afecto negativo (10 ítems). Mide la frecuencia con que la persona experimenta diferentes emociones y estados de ánimo.",
+    "instructions": "Indique con qué frecuencia ha experimentado cada una de las siguientes emociones y sentimientos durante las últimas semanas.",
+    "category": "Estado de ánimo",
+    "questions": [
+      {
+        "id": "panas_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Interesado/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Entusiasta",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Fuerte",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Excitado/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Orgulloso/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Atento/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Inspirado/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q8",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Decidido/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q9",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Activo/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q10",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Preocupado/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q11",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Asustado/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q12",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Hostil",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q13",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Irritable",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q14",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Triste",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q15",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Culpable",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q16",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Asustado/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q17",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Nervioso/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q18",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Inquieto/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q19",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Angustiado/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      },
+      {
+        "id": "panas_q20",
+        "type": "MULTIPLE_CHOICE",
+        "text": "Tenso/a",
+        "required": true,
+        "options": [
+          { "id": "1", "text": "Muy poco o nada", "value": 1 },
+          { "id": "2", "text": "Un poco", "value": 2 },
+          { "id": "3", "text": "Moderadamente", "value": 3 },
+          { "id": "4", "text": "Bastante", "value": 4 },
+          { "id": "5", "text": "Extremadamente", "value": 5 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pge",
+    "title": "PGE - Índice de Bienestar Psicológico General",
+    "description": "Cuestionario de 22 ítems que evalúa el bienestar psicológico general en seis dimensiones: ansiedad, estado de ánimo deprimido, bienestar positivo, autocontrol, salud general y vitalidad.",
+    "instructions": "Las siguientes preguntas se refieren a cómo se ha sentido durante el último mes. Lea cada pregunta y seleccione la respuesta que mejor describa cómo se ha sentido.",
+    "category": "Bienestar",
+    "questions": [
+      {
+        "id": "pge_q1",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido nervioso/a o tenso/a durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q2",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido triste o decaído/a durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q3",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido calmado/a y en paz durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q4",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido con energía y vitalidad durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q5",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido con buen estado de ánimo y feliz durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q6",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido cansado/a o agotado/a durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q7",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Ha tenido dificultades para dormir durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q8",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido con control sobre las situaciones de su vida?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q9",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Se ha sentido satisfecho/a con su vida durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      },
+      {
+        "id": "pge_q10",
+        "type": "MULTIPLE_CHOICE",
+        "text": "¿Ha sentido que tiene personas que lo/a apoyan durante el último mes?",
+        "required": true,
+        "options": [
+          { "id": "0", "text": "Nunca", "value": 0 },
+          { "id": "1", "text": "Casi nunca", "value": 1 },
+          { "id": "2", "text": "Algunas veces", "value": 2 },
+          { "id": "3", "text": "Frecuentemente", "value": 3 },
+          { "id": "4", "text": "La mayor parte del tiempo", "value": 4 },
+          { "id": "5", "text": "Todo el tiempo", "value": 5 }
+        ]
+      }
+    ]
+  }
+]

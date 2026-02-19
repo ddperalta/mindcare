@@ -1,0 +1,318 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && request.auth.token.role == 'ADMIN';
+    }
+
+    function isTherapist() {
+      return isAuthenticated() &&
+             request.auth.token.role == 'THERAPIST' &&
+             request.auth.token.isVerified == true;
+    }
+
+    function isPatient() {
+      return isAuthenticated() && request.auth.token.role == 'PATIENT';
+    }
+
+    function belongsToTenant(tenantId) {
+      return isTherapist() && request.auth.token.tenantId == tenantId;
+    }
+
+    function hasPatientRelationship(patientId) {
+      let relationshipId = request.auth.uid + '_' + patientId;
+      return exists(/databases/$(database)/documents/therapist_patients/$(relationshipId));
+    }
+
+    // Allows a patient to read their own therapist's documents
+    function isMyTherapist(therapistId) {
+      let relationshipId = therapistId + '_' + request.auth.uid;
+      return isPatient() && exists(/databases/$(database)/documents/therapist_patients/$(relationshipId));
+    }
+
+    match /patient_invitations/{token} {
+      allow get: if true;
+
+      allow create: if isTherapist() &&
+        request.resource.data.therapistId == request.auth.uid &&
+        request.resource.data.tenantId == request.auth.token.tenantId &&
+        request.resource.data.status == 'PENDING';
+
+      allow list: if isTherapist() &&
+        resource.data.therapistId == request.auth.uid;
+
+      allow update: if isTherapist() &&
+        resource.data.therapistId == request.auth.uid &&
+        request.resource.data.status == 'CANCELLED';
+
+      allow read, update: if isAdmin();
+    }
+
+    match /user_invitations/{token} {
+      allow get: if true;
+
+      allow create: if isAdmin() &&
+        request.resource.data.invitedBy == request.auth.uid &&
+        request.resource.data.status == 'PENDING' &&
+        (request.resource.data.role == 'THERAPIST' || request.resource.data.role == 'PATIENT');
+
+      allow list: if isAdmin();
+
+      allow update: if isAdmin() &&
+        resource.data.invitedBy == request.auth.uid;
+    }
+
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (
+        request.auth.uid == userId ||
+        hasPatientRelationship(userId) ||
+        isMyTherapist(userId) ||
+        isAdmin()
+      );
+
+      allow create: if false;
+
+      allow update: if isAuthenticated() && (
+        request.auth.uid == userId ||
+        isAdmin()
+      );
+
+      allow delete: if isAdmin();
+    }
+
+    match /therapists/{therapistId} {
+      allow read: if isAuthenticated() && (
+        request.auth.uid == therapistId ||
+        isAdmin()
+      );
+
+      allow create: if false;
+
+      allow update: if isAuthenticated() && (
+        request.auth.uid == therapistId ||
+        isAdmin()
+      );
+
+      allow delete: if isAdmin();
+    }
+
+    match /patients/{patientId} {
+      allow read: if isAuthenticated() && (
+        request.auth.uid == patientId ||
+        hasPatientRelationship(patientId) ||
+        isAdmin()
+      );
+
+      allow create: if false;
+
+      allow update: if isAuthenticated() && (
+        request.auth.uid == patientId ||
+        hasPatientRelationship(patientId) ||
+        isAdmin()
+      );
+
+      allow delete: if isAdmin();
+    }
+
+    match /therapist_patients/{relationshipId} {
+      allow read: if isAuthenticated() && (
+        resource.data.therapistId == request.auth.uid ||
+        resource.data.patientId == request.auth.uid ||
+        isAdmin()
+      );
+
+      allow create: if isTherapist() &&
+        request.resource.data.therapistId == request.auth.uid &&
+        belongsToTenant(request.resource.data.tenantId);
+
+      allow update: if isTherapist() &&
+        resource.data.therapistId == request.auth.uid;
+
+      allow delete: if isAdmin();
+    }
+
+    match /appointments/{appointmentId} {
+      allow read: if isAuthenticated() && (
+        resource.data.therapistId == request.auth.uid ||
+        resource.data.patientId == request.auth.uid ||
+        hasPatientRelationship(resource.data.patientId) ||
+        isAdmin()
+      );
+
+      allow create: if (isTherapist() &&
+        belongsToTenant(request.resource.data.tenantId) &&
+        hasPatientRelationship(request.resource.data.patientId)) || isAdmin();
+
+      allow update: if (isTherapist() &&
+          (resource.data.therapistId == request.auth.uid ||
+           hasPatientRelationship(resource.data.patientId)) &&
+          belongsToTenant(resource.data.tenantId)) ||
+        (isPatient() &&
+          resource.data.patientId == request.auth.uid &&
+          request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['paymentProofUrl', 'paymentStatus', 'updatedAt'])) ||
+        isAdmin();
+
+      allow delete: if isAdmin();
+    }
+
+    match /appointment_requests/{requestId} {
+      allow read: if isAuthenticated() && (
+        resource.data.therapistId == request.auth.uid ||
+        resource.data.patientId == request.auth.uid ||
+        isAdmin()
+      );
+
+      allow create: if isPatient() &&
+        request.resource.data.patientId == request.auth.uid &&
+        request.resource.data.status == 'PENDING';
+
+      allow update: if (isTherapist() && resource.data.therapistId == request.auth.uid) || isAdmin();
+
+      allow delete: if isAdmin();
+    }
+
+    match /test_definitions/{testId} {
+      allow read: if isAuthenticated();
+
+      allow create: if isAuthenticated() &&
+        request.auth.token.role == 'THERAPIST' &&
+        request.resource.data.tenantId == request.auth.token.tenantId &&
+        request.resource.data.createdBy == request.auth.uid;
+
+      allow create: if isAdmin() &&
+        request.resource.data.isSystemTemplate == true &&
+        request.resource.data.tenantId == null;
+
+      allow update, delete: if isTherapist() &&
+        resource.data.tenantId == request.auth.token.tenantId &&
+        resource.data.createdBy == request.auth.uid;
+
+      allow update, delete: if isAdmin() &&
+        resource.data.isSystemTemplate == true;
+    }
+
+    match /test_versions/{versionId} {
+      allow read: if isAuthenticated();
+
+      allow create: if isTherapist();
+
+      allow update: if false;
+
+      allow delete: if isAdmin();
+    }
+
+    match /test_assignments/{assignmentId} {
+      allow read: if isAuthenticated() && (
+        resource.data.therapistId == request.auth.uid ||
+        resource.data.patientId == request.auth.uid ||
+        hasPatientRelationship(resource.data.patientId) ||
+        isAdmin()
+      );
+
+      allow create: if isAuthenticated() &&
+        request.auth.token.role == 'THERAPIST' &&
+        request.resource.data.therapistId == request.auth.uid &&
+        request.resource.data.tenantId == request.auth.token.tenantId;
+
+      allow update: if isAuthenticated() && (
+        (request.auth.token.role == 'THERAPIST' && resource.data.therapistId == request.auth.uid) ||
+        (isPatient() && resource.data.patientId == request.auth.uid)
+      );
+
+      allow delete: if isAdmin();
+    }
+
+    match /test_applications/{applicationId} {
+      allow read: if isAuthenticated() && (
+        resource.data.therapistId == request.auth.uid ||
+        resource.data.patientId == request.auth.uid ||
+        isAdmin()
+      );
+
+      allow create: if isTherapist() &&
+        belongsToTenant(request.resource.data.tenantId) &&
+        hasPatientRelationship(request.resource.data.patientId);
+
+      allow update: if (isTherapist() && resource.data.therapistId == request.auth.uid) ||
+        (isPatient() && resource.data.patientId == request.auth.uid);
+
+      allow delete: if isAdmin();
+
+      match /responses/{responseId} {
+        allow read: if isAuthenticated() && (
+          get(/databases/$(database)/documents/test_applications/$(applicationId)).data.therapistId == request.auth.uid ||
+          get(/databases/$(database)/documents/test_applications/$(applicationId)).data.patientId == request.auth.uid
+        );
+
+        allow create: if isPatient() &&
+          get(/databases/$(database)/documents/test_applications/$(applicationId)).data.patientId == request.auth.uid;
+
+        allow update: if isPatient() &&
+          get(/databases/$(database)/documents/test_applications/$(applicationId)).data.patientId == request.auth.uid;
+
+        allow delete: if isAdmin();
+      }
+    }
+
+    match /session_notes/{noteId} {
+      allow read: if (isTherapist() && resource.data.therapistId == request.auth.uid) ||
+        (isTherapist() && request.auth.uid in resource.data.visibility.sharedWith) ||
+        (isTherapist() && hasPatientRelationship(resource.data.patientId)) ||
+        (isPatient() && resource.data.patientId == request.auth.uid && resource.data.visibility.patientCanView == true) ||
+        isAdmin();
+
+      allow create: if isTherapist() &&
+        belongsToTenant(request.resource.data.tenantId) &&
+        hasPatientRelationship(request.resource.data.patientId);
+
+      allow update: if isTherapist() &&
+        resource.data.therapistId == request.auth.uid;
+
+      allow delete: if isAdmin();
+    }
+
+    match /feedback/{feedbackId} {
+      allow read: if isAuthenticated() && (
+        resource.data.fromUserId == request.auth.uid ||
+        resource.data.toUserId == request.auth.uid ||
+        isAdmin()
+      );
+
+      allow create: if isAuthenticated() &&
+        request.resource.data.fromUserId == request.auth.uid;
+
+      allow update: if resource.data.fromUserId == request.auth.uid;
+
+      allow delete: if isAdmin() || resource.data.fromUserId == request.auth.uid;
+    }
+
+    match /audit_logs/{tenantId}/logs/{logId} {
+      allow read: if belongsToTenant(tenantId) || isAdmin();
+
+      allow write: if false;
+    }
+
+    // ===== Notifications =====
+
+    match /notifications/{notificationId} {
+      // Only the recipient can read their notifications
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.uid;
+
+      // Therapists and admins can create notifications for patients
+      allow create: if isAuthenticated() && (isTherapist() || isAdmin());
+
+      // Only the recipient can mark as read (only isRead field)
+      allow update: if isAuthenticated() &&
+        resource.data.userId == request.auth.uid &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['isRead']);
+
+      allow delete: if isAdmin();
+    }
+  }
+}

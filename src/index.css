@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Poppins', sans-serif;
+
+  /* Teal scale */
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+
+  /* Mint scale */
+  --color-mint-50: #f0fdf4;
+  --color-mint-100: #dcfce7;
+  --color-mint-200: #bbf7d0;
+  --color-mint-300: #86efac;
+  --color-mint-400: #4ade80;
+  --color-mint-500: #22c55e;
+  --color-mint-600: #16a34a;
+  --color-mint-700: #15803d;
+  --color-mint-800: #166534;
+  --color-mint-900: #14532d;
+
+  /* Coral scale */
+  --color-coral-50: #fef2f2;
+  --color-coral-100: #fee2e2;
+  --color-coral-200: #fecaca;
+  --color-coral-300: #fca5a5;
+  --color-coral-400: #f87171;
+  --color-coral-500: #ef4444;
+  --color-coral-600: #dc2626;
+  --color-coral-700: #b91c1c;
+  --color-coral-800: #991b1b;
+  --color-coral-900: #7f1d1d;
+
+  /* Sage neutrals */
+  --color-sage-50: #fafaf9;
+  --color-sage-100: #f5f5f4;
+  --color-sage-200: #e7e5e4;
+  --color-sage-300: #d6d3d1;
+  --color-sage-400: #a8a29e;
+  --color-sage-500: #78716c;
+  --color-sage-600: #57534e;
+  --color-sage-700: #44403c;
+  --color-sage-800: #292524;
+  --color-sage-900: #1c1917;
+
+  /* Border radius */
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  --shadow-soft-lg: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
+}
+
+/* Custom utility classes */
+.btn-primary {
+  @apply bg-coral-500 hover:bg-coral-600 text-white font-semibold
+         py-3 px-6 rounded-xl shadow-soft transition-all duration-200
+         hover:shadow-soft-lg active:scale-[0.98]
+         text-sm sm:text-base
+         min-h-[44px];
+}
+
+.btn-secondary {
+  @apply bg-white border-2 border-teal-500 text-teal-600 font-semibold
+         py-3 px-6 rounded-xl shadow-soft transition-all duration-200
+         hover:bg-teal-50 active:scale-[0.98]
+         text-sm sm:text-base
+         min-h-[44px];
+}
+
+.btn-ghost {
+  @apply text-sage-600 hover:bg-sage-100 font-medium
+         py-2 px-3 sm:px-4 rounded-lg transition-colors duration-200
+         text-sm
+         min-h-[44px] flex items-center justify-center;
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-card p-6;
+}
+
+.card-elevated {
+  @apply bg-white rounded-2xl shadow-soft-lg p-8;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 border border-sage-300 rounded-xl
+         focus:ring-2 focus:ring-teal-500 focus:border-transparent
+         transition-all duration-200 outline-none
+         text-base
+         min-h-[44px];
+}
+
+.input-error {
+  @apply border-coral-500 focus:ring-coral-500;
+}
+
+.label {
+  @apply block text-sm font-medium text-sage-700 mb-2;
+}
+
+.error-text {
+  @apply text-sm text-coral-600 mt-1;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafaf9;
+  color: #292524;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1c1917;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Prevent text size adjustment on mobile */
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Better touch targets */
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+
+  /* Improve form field visibility on mobile */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  /* Better modal spacing on mobile */
+  .modal-content {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* Improve card padding on mobile */
+  .card, .card-elevated {
+    padding: 1rem;
+  }
+
+  /* Better heading sizes on mobile */
+  h1 {
+    font-size: 1.75rem;
+    line-height: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+/* FullCalendar theme overrides */
+.fc .fc-button-primary {
+  background-color: var(--color-teal-600) !important;
+  border-color: var(--color-teal-600) !important;
+}
+.fc .fc-button-primary:hover {
+  background-color: var(--color-teal-700) !important;
+}
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background-color: var(--color-teal-800) !important;
+  border-color: var(--color-teal-800) !important;
+}
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: var(--color-teal-50) !important;
+}
+.fc .fc-event {
+  border-radius: 0.5rem;
+  padding: 2px 4px;
+  font-size: 0.8rem;
+}
+.fc .fc-toolbar-title {
+  font-size: 1.25rem !important;
+  font-weight: 600;
+  color: var(--color-sage-900);
+}
+.fc th {
+  color: var(--color-sage-600);
+  font-weight: 500;
+}
+.fc .fc-timegrid-now-indicator-line {
+  border-color: var(--color-coral-500);
+}
+
+/* Improve touch interactions */
+@media (hover: none) {
+  button:active,
+  .btn-primary:active,
+  .btn-secondary:active,
+  .btn-ghost:active {
+    transform: scale(0.95);
+  }
+}

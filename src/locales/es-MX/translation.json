@@ -1,0 +1,368 @@
+{
+  "app": {
+    "name": "MindCare",
+    "description": "Plataforma Profesional de Salud Mental"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "yes": "Sí",
+    "no": "No",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "name": "Nombre",
+    "date": "Fecha",
+    "time": "Hora",
+    "status": "Estado",
+    "actions": "Acciones"
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido de nuevo",
+      "subtitle": "Inicia sesión en tu cuenta de MindCare",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "••••••••",
+      "rememberMe": "Recordarme",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "signIn": "Iniciar sesión",
+      "noAccount": "¿No tienes cuenta?",
+      "signUp": "Regístrate",
+      "error": "Error al iniciar sesión. Por favor verifica tus credenciales."
+    },
+    "register": {
+      "title": "Crear cuenta",
+      "subtitle": "Únete a MindCare hoy",
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "Juan Pérez",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "••••••••",
+      "passwordHelper": "Al menos 6 caracteres",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPasswordPlaceholder": "••••••••",
+      "iAmA": "Soy un:",
+      "patient": "Paciente",
+      "therapist": "Terapeuta",
+      "therapistNote": "Tu cuenta de terapeuta requerirá verificación por parte del administrador antes de poder acceder a todas las funciones.",
+      "createAccount": "Crear cuenta",
+      "haveAccount": "¿Ya tienes cuenta?",
+      "signIn": "Inicia sesión",
+      "errors": {
+        "passwordMismatch": "Las contraseñas no coinciden",
+        "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
+        "emailInUse": "Este correo electrónico ya está en uso",
+        "generic": "Error al crear la cuenta. Por favor intenta de nuevo."
+      }
+    },
+    "signOut": "Cerrar sesión"
+  },
+  "roles": {
+    "THERAPIST": "Terapeuta",
+    "PATIENT": "Paciente",
+    "ADMIN": "Administrador"
+  },
+  "dashboard": {
+    "therapist": {
+      "welcome": "Bienvenido de nuevo, {{name}}",
+      "totalPatients": "Total de Pacientes",
+      "appointmentsToday": "Citas de hoy",
+      "pendingTests": "Tests pendientes",
+      "upcomingAppointments": "Próximas citas",
+      "noAppointments": "No hay citas programadas",
+      "recentActivity": "Actividad reciente",
+      "quickActions": "Acciones rápidas",
+      "addPatient": "Agregar paciente",
+      "scheduleAppointment": "Agendar cita",
+      "createTest": "Crear test",
+      "viewReports": "Ver reportes"
+    },
+    "patient": {
+      "welcome": "Bienvenido, {{name}}",
+      "nextAppointment": "Próxima cita",
+      "noUpcomingAppointments": "No hay citas próximas",
+      "pendingTests": "Tests pendientes",
+      "noPendingTests": "No hay tests pendientes",
+      "recentActivity": "Actividad reciente",
+      "noRecentActivity": "No hay actividad reciente",
+      "myAppointments": "Mis citas",
+      "myTests": "Mis tests",
+      "myRecords": "Mis registros"
+    }
+  },
+  "appointments": {
+    "title": "Citas",
+    "myAppointments": "Mis Citas",
+    "schedule": "Agendar cita",
+    "newAppointment": "Nueva Cita",
+    "editAppointment": "Editar Cita",
+    "upcoming": "Próximas",
+    "past": "Pasadas",
+    "cancelled": "Canceladas",
+    "myRequests": "Mis Solicitudes",
+    "allAppointments": "Todas las Citas",
+    "viewAll": "Ver Todas",
+    "noAppointments": "No hay citas",
+    "noUpcoming": "No hay citas próximas",
+    "noPast": "No hay citas pasadas",
+    "noRequests": "No hay solicitudes",
+    "todayCount": "{{count}} cita(s) hoy",
+    "status": {
+      "SCHEDULED": "Programada",
+      "COMPLETED": "Completada",
+      "CANCELLED": "Cancelada",
+      "NO_SHOW": "No asistió"
+    },
+    "details": {
+      "patient": "Paciente",
+      "therapist": "Terapeuta",
+      "date": "Fecha",
+      "time": "Hora",
+      "startTime": "Hora de inicio",
+      "endTime": "Hora de fin",
+      "duration": "Duración",
+      "location": "Ubicación",
+      "locationPlaceholder": "Ej: Consultorio 3, Piso 2",
+      "notes": "Notas",
+      "notesPlaceholder": "Notas opcionales sobre la cita...",
+      "virtual": "Virtual",
+      "inPerson": "Presencial",
+      "meetingLink": "Enlace de reunión",
+      "meetingLinkPlaceholder": "https://meet.google.com/...",
+      "sessionPrice": "Precio de sesión",
+      "bankInfo": "Datos bancarios",
+      "paymentStatus": "Estado de pago",
+      "uploadReceipt": "Subir comprobante",
+      "confirmPayment": "Confirmar pago",
+      "viewReceipt": "Ver comprobante",
+      "paymentPending": "Pago pendiente",
+      "proofUploaded": "Comprobante enviado",
+      "paymentConfirmed": "Pago confirmado"
+    },
+    "form": {
+      "selectPatient": "Seleccionar paciente",
+      "selectTherapist": "Seleccionar terapeuta",
+      "date": "Fecha",
+      "startTime": "Hora de inicio",
+      "endTime": "Hora de fin",
+      "isVirtual": "Cita virtual",
+      "creating": "Creando cita...",
+      "updating": "Actualizando cita...",
+      "created": "Cita creada exitosamente",
+      "updated": "Cita actualizada exitosamente"
+    },
+    "actions": {
+      "reschedule": "Reagendar",
+      "cancel": "Cancelar",
+      "complete": "Marcar como completada",
+      "markNoShow": "Marcar como no asistió",
+      "addNotes": "Agregar notas",
+      "edit": "Editar",
+      "requestModification": "Solicitar modificación",
+      "requestCancellation": "Solicitar cancelación"
+    },
+    "requests": {
+      "title": "Solicitudes Pendientes",
+      "modification": "Modificación",
+      "cancellation": "Cancelación",
+      "reason": "Motivo",
+      "reasonPlaceholder": "Explica el motivo de tu solicitud...",
+      "proposedTime": "Horario propuesto",
+      "originalTime": "Horario original",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "responseNote": "Nota de respuesta",
+      "responseNotePlaceholder": "Motivo del rechazo (opcional)...",
+      "status": {
+        "PENDING": "Pendiente",
+        "APPROVED": "Aprobada",
+        "REJECTED": "Rechazada"
+      },
+      "submitting": "Enviando solicitud...",
+      "submitted": "Solicitud enviada exitosamente",
+      "approved": "Solicitud aprobada",
+      "rejected": "Solicitud rechazada"
+    },
+    "calendar": {
+      "today": "Hoy",
+      "month": "Mes",
+      "week": "Semana",
+      "day": "Día"
+    },
+    "filter": {
+      "allTherapists": "Todos los terapeutas",
+      "byTherapist": "Filtrar por terapeuta"
+    }
+  },
+  "patients": {
+    "title": "Pacientes",
+    "addPatient": "Agregar paciente",
+    "searchPlaceholder": "Buscar pacientes...",
+    "noPatients": "No hay pacientes registrados",
+    "active": "Activos",
+    "inactive": "Inactivos",
+    "all": "Todos",
+    "viewProfile": "Ver perfil",
+    "transferPatient": "Transferir paciente",
+    "transferConfirm": "Confirmar transferencia",
+    "transferSuccess": "Paciente transferido exitosamente",
+    "patientSince": "Paciente desde",
+    "profile": {
+      "title": "Perfil del paciente",
+      "personalInfo": "Información personal",
+      "contactInfo": "Información de contacto",
+      "emergencyContact": "Contacto de emergencia",
+      "dateOfBirth": "Fecha de nacimiento",
+      "phone": "Teléfono",
+      "address": "Dirección",
+      "relationshipStart": "Inicio de relación terapéutica"
+    },
+    "tabs": {
+      "profile": "Perfil",
+      "appointments": "Citas",
+      "tests": "Tests",
+      "notes": "Notas"
+    }
+  },
+  "tests": {
+    "title": "Tests psicológicos",
+    "create": "Crear test",
+    "editTest": "Editar test",
+    "viewResponses": "Ver respuestas",
+    "hideResponses": "Ocultar respuestas",
+    "library": "Biblioteca de tests",
+    "assigned": "Asignados",
+    "completed": "Completados",
+    "pending": "Pendientes",
+    "take": "Realizar test",
+    "results": "Resultados",
+    "status": {
+      "PENDING": "Pendiente",
+      "IN_PROGRESS": "En progreso",
+      "COMPLETED": "Completado"
+    },
+    "types": {
+      "MULTIPLE_CHOICE": "Opción múltiple",
+      "SCALE": "Escala",
+      "TEXT": "Texto libre",
+      "BOOLEAN": "Sí/No"
+    },
+    "archive": "Archivar",
+    "unarchive": "Desarchivar",
+    "archived": "Archivado",
+    "showArchived": "Mostrar archivados",
+    "hideArchived": "Ocultar archivados",
+    "builder": {
+      "title": "Constructor de tests",
+      "name": "Nombre del test",
+      "description": "Descripción",
+      "category": "Categoría",
+      "addSection": "Agregar sección",
+      "addQuestion": "Agregar pregunta",
+      "questionText": "Texto de la pregunta",
+      "questionType": "Tipo de pregunta",
+      "required": "Requerida",
+      "options": "Opciones",
+      "scaleMin": "Mínimo",
+      "scaleMax": "Máximo",
+      "publish": "Publicar test",
+      "saveDraft": "Guardar borrador"
+    }
+  },
+  "sessionNotes": {
+    "title": "Notas de sesión",
+    "create": "Crear nota",
+    "types": {
+      "SOAP": "SOAP",
+      "DAP": "DAP",
+      "PROGRESS": "Progreso",
+      "INTAKE": "Evaluación inicial",
+      "DISCHARGE": "Alta"
+    },
+    "fields": {
+      "subjective": "Subjetivo",
+      "objective": "Objetivo",
+      "assessment": "Evaluación",
+      "plan": "Plan",
+      "data": "Datos",
+      "sessionDate": "Fecha de sesión",
+      "linkedAppointment": "Cita relacionada"
+    },
+    "visibility": {
+      "title": "Visibilidad",
+      "therapistOnly": "Solo terapeuta",
+      "sharedWith": "Compartido con",
+      "patientCanView": "El paciente puede ver"
+    }
+  },
+  "timeline": {
+    "title": "Línea de tiempo clínica",
+    "filters": {
+      "dateRange": "Rango de fechas",
+      "type": "Tipo",
+      "all": "Todo",
+      "appointments": "Citas",
+      "tests": "Tests",
+      "notes": "Notas",
+      "feedback": "Retroalimentación"
+    },
+    "export": "Exportar línea de tiempo",
+    "noRecords": "No hay registros en este período"
+  },
+  "feedback": {
+    "title": "Retroalimentación",
+    "give": "Dar retroalimentación",
+    "received": "Recibida",
+    "sent": "Enviada",
+    "rating": "Calificación",
+    "comment": "Comentario",
+    "submit": "Enviar retroalimentación"
+  },
+  "settings": {
+    "title": "Configuración",
+    "profile": "Perfil",
+    "security": "Seguridad",
+    "notifications": "Notificaciones",
+    "language": "Idioma",
+    "privacy": "Privacidad",
+    "changePassword": "Cambiar contraseña",
+    "updateProfile": "Actualizar perfil"
+  },
+  "navigation": {
+    "dashboard": "Panel principal",
+    "patients": "Pacientes",
+    "appointments": "Citas",
+    "tests": "Tests",
+    "sessionNotes": "Notas de sesión",
+    "timeline": "Línea de tiempo",
+    "reports": "Reportes",
+    "settings": "Configuración"
+  },
+  "errors": {
+    "generic": "Ocurrió un error. Por favor intenta de nuevo.",
+    "network": "Error de conexión. Verifica tu internet.",
+    "unauthorized": "No tienes permiso para realizar esta acción.",
+    "notFound": "No se encontró el recurso solicitado.",
+    "validation": "Por favor verifica los datos ingresados."
+  },
+  "validation": {
+    "required": "Este campo es requerido",
+    "email": "Ingresa un correo electrónico válido",
+    "minLength": "Debe tener al menos {{count}} caracteres",
+    "maxLength": "No debe exceder {{count}} caracteres",
+    "passwordMismatch": "Las contraseñas no coinciden"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "name": "mindcare-scripts",
+  "version": "1.0.0",
+  "description": "Admin setup scripts for MindCare platform"
+}

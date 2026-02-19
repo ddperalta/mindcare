@@ -1,0 +1,368 @@
+{
+  "app": {
+    "name": "MindCare",
+    "description": "Professional Mental Health Platform"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "search": "Search",
+    "filter": "Filter",
+    "yes": "Yes",
+    "no": "No",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "date": "Date",
+    "time": "Time",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your MindCare account",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up",
+      "error": "Failed to sign in. Please check your credentials."
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join MindCare today",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "passwordHelper": "At least 6 characters",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "••••••••",
+      "iAmA": "I am a:",
+      "patient": "Patient",
+      "therapist": "Therapist",
+      "therapistNote": "Your therapist account will require admin verification before you can access all features.",
+      "createAccount": "Create Account",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "errors": {
+        "passwordMismatch": "Passwords do not match",
+        "passwordTooShort": "Password must be at least 6 characters",
+        "emailInUse": "This email is already in use",
+        "generic": "Failed to create account. Please try again."
+      }
+    },
+    "signOut": "Sign Out"
+  },
+  "roles": {
+    "THERAPIST": "Therapist",
+    "PATIENT": "Patient",
+    "ADMIN": "Administrator"
+  },
+  "dashboard": {
+    "therapist": {
+      "welcome": "Welcome back, {{name}}",
+      "totalPatients": "Total Patients",
+      "appointmentsToday": "Appointments Today",
+      "pendingTests": "Pending Tests",
+      "upcomingAppointments": "Upcoming Appointments",
+      "noAppointments": "No appointments scheduled",
+      "recentActivity": "Recent Activity",
+      "quickActions": "Quick Actions",
+      "addPatient": "Add Patient",
+      "scheduleAppointment": "Schedule Appointment",
+      "createTest": "Create Test",
+      "viewReports": "View Reports"
+    },
+    "patient": {
+      "welcome": "Welcome, {{name}}",
+      "nextAppointment": "Next Appointment",
+      "noUpcomingAppointments": "No upcoming appointments",
+      "pendingTests": "Pending Tests",
+      "noPendingTests": "No pending tests",
+      "recentActivity": "Recent Activity",
+      "noRecentActivity": "No recent activity",
+      "myAppointments": "My Appointments",
+      "myTests": "My Tests",
+      "myRecords": "My Records"
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "myAppointments": "My Appointments",
+    "schedule": "Schedule Appointment",
+    "newAppointment": "New Appointment",
+    "editAppointment": "Edit Appointment",
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "cancelled": "Cancelled",
+    "myRequests": "My Requests",
+    "allAppointments": "All Appointments",
+    "viewAll": "View All",
+    "noAppointments": "No appointments",
+    "noUpcoming": "No upcoming appointments",
+    "noPast": "No past appointments",
+    "noRequests": "No requests",
+    "todayCount": "{{count}} appointment(s) today",
+    "status": {
+      "SCHEDULED": "Scheduled",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled",
+      "NO_SHOW": "No Show"
+    },
+    "details": {
+      "patient": "Patient",
+      "therapist": "Therapist",
+      "date": "Date",
+      "time": "Time",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "duration": "Duration",
+      "location": "Location",
+      "locationPlaceholder": "e.g. Office 3, Floor 2",
+      "notes": "Notes",
+      "notesPlaceholder": "Optional notes about the appointment...",
+      "virtual": "Virtual",
+      "inPerson": "In Person",
+      "meetingLink": "Meeting Link",
+      "meetingLinkPlaceholder": "https://meet.google.com/...",
+      "sessionPrice": "Session price",
+      "bankInfo": "Bank information",
+      "paymentStatus": "Payment status",
+      "uploadReceipt": "Upload receipt",
+      "confirmPayment": "Confirm payment",
+      "viewReceipt": "View receipt",
+      "paymentPending": "Payment pending",
+      "proofUploaded": "Proof uploaded",
+      "paymentConfirmed": "Payment confirmed"
+    },
+    "form": {
+      "selectPatient": "Select patient",
+      "selectTherapist": "Select therapist",
+      "date": "Date",
+      "startTime": "Start time",
+      "endTime": "End time",
+      "isVirtual": "Virtual appointment",
+      "creating": "Creating appointment...",
+      "updating": "Updating appointment...",
+      "created": "Appointment created successfully",
+      "updated": "Appointment updated successfully"
+    },
+    "actions": {
+      "reschedule": "Reschedule",
+      "cancel": "Cancel",
+      "complete": "Mark as Completed",
+      "markNoShow": "Mark No Show",
+      "addNotes": "Add Notes",
+      "edit": "Edit",
+      "requestModification": "Request Modification",
+      "requestCancellation": "Request Cancellation"
+    },
+    "requests": {
+      "title": "Pending Requests",
+      "modification": "Modification",
+      "cancellation": "Cancellation",
+      "reason": "Reason",
+      "reasonPlaceholder": "Explain the reason for your request...",
+      "proposedTime": "Proposed time",
+      "originalTime": "Original time",
+      "approve": "Approve",
+      "reject": "Reject",
+      "responseNote": "Response note",
+      "responseNotePlaceholder": "Reason for rejection (optional)...",
+      "status": {
+        "PENDING": "Pending",
+        "APPROVED": "Approved",
+        "REJECTED": "Rejected"
+      },
+      "submitting": "Submitting request...",
+      "submitted": "Request submitted successfully",
+      "approved": "Request approved",
+      "rejected": "Request rejected"
+    },
+    "calendar": {
+      "today": "Today",
+      "month": "Month",
+      "week": "Week",
+      "day": "Day"
+    },
+    "filter": {
+      "allTherapists": "All therapists",
+      "byTherapist": "Filter by therapist"
+    }
+  },
+  "patients": {
+    "title": "Patients",
+    "addPatient": "Add Patient",
+    "searchPlaceholder": "Search patients...",
+    "noPatients": "No patients registered",
+    "active": "Active",
+    "inactive": "Inactive",
+    "all": "All",
+    "viewProfile": "View profile",
+    "transferPatient": "Transfer patient",
+    "transferConfirm": "Confirm transfer",
+    "transferSuccess": "Patient transferred successfully",
+    "patientSince": "Patient since",
+    "profile": {
+      "title": "Patient Profile",
+      "personalInfo": "Personal Information",
+      "contactInfo": "Contact Information",
+      "emergencyContact": "Emergency Contact",
+      "dateOfBirth": "Date of Birth",
+      "phone": "Phone",
+      "address": "Address",
+      "relationshipStart": "Therapeutic Relationship Start"
+    },
+    "tabs": {
+      "profile": "Profile",
+      "appointments": "Appointments",
+      "tests": "Tests",
+      "notes": "Notes"
+    }
+  },
+  "tests": {
+    "title": "Psychological Tests",
+    "create": "Create Test",
+    "editTest": "Edit test",
+    "viewResponses": "View responses",
+    "hideResponses": "Hide responses",
+    "library": "Test Library",
+    "assigned": "Assigned",
+    "completed": "Completed",
+    "pending": "Pending",
+    "take": "Take Test",
+    "results": "Results",
+    "status": {
+      "PENDING": "Pending",
+      "IN_PROGRESS": "In Progress",
+      "COMPLETED": "Completed"
+    },
+    "types": {
+      "MULTIPLE_CHOICE": "Multiple Choice",
+      "SCALE": "Scale",
+      "TEXT": "Free Text",
+      "BOOLEAN": "Yes/No"
+    },
+    "archive": "Archive",
+    "unarchive": "Unarchive",
+    "archived": "Archived",
+    "showArchived": "Show archived",
+    "hideArchived": "Hide archived",
+    "builder": {
+      "title": "Test Builder",
+      "name": "Test Name",
+      "description": "Description",
+      "category": "Category",
+      "addSection": "Add Section",
+      "addQuestion": "Add Question",
+      "questionText": "Question Text",
+      "questionType": "Question Type",
+      "required": "Required",
+      "options": "Options",
+      "scaleMin": "Minimum",
+      "scaleMax": "Maximum",
+      "publish": "Publish Test",
+      "saveDraft": "Save Draft"
+    }
+  },
+  "sessionNotes": {
+    "title": "Session Notes",
+    "create": "Create Note",
+    "types": {
+      "SOAP": "SOAP",
+      "DAP": "DAP",
+      "PROGRESS": "Progress",
+      "INTAKE": "Intake",
+      "DISCHARGE": "Discharge"
+    },
+    "fields": {
+      "subjective": "Subjective",
+      "objective": "Objective",
+      "assessment": "Assessment",
+      "plan": "Plan",
+      "data": "Data",
+      "sessionDate": "Session Date",
+      "linkedAppointment": "Linked Appointment"
+    },
+    "visibility": {
+      "title": "Visibility",
+      "therapistOnly": "Therapist Only",
+      "sharedWith": "Shared With",
+      "patientCanView": "Patient Can View"
+    }
+  },
+  "timeline": {
+    "title": "Clinical Timeline",
+    "filters": {
+      "dateRange": "Date Range",
+      "type": "Type",
+      "all": "All",
+      "appointments": "Appointments",
+      "tests": "Tests",
+      "notes": "Notes",
+      "feedback": "Feedback"
+    },
+    "export": "Export Timeline",
+    "noRecords": "No records in this period"
+  },
+  "feedback": {
+    "title": "Feedback",
+    "give": "Give Feedback",
+    "received": "Received",
+    "sent": "Sent",
+    "rating": "Rating",
+    "comment": "Comment",
+    "submit": "Submit Feedback"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "security": "Security",
+    "notifications": "Notifications",
+    "language": "Language",
+    "privacy": "Privacy",
+    "changePassword": "Change Password",
+    "updateProfile": "Update Profile"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "patients": "Patients",
+    "appointments": "Appointments",
+    "tests": "Tests",
+    "sessionNotes": "Session Notes",
+    "timeline": "Timeline",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "errors": {
+    "generic": "An error occurred. Please try again.",
+    "network": "Connection error. Check your internet.",
+    "unauthorized": "You don't have permission to perform this action.",
+    "notFound": "The requested resource was not found.",
+    "validation": "Please check the entered data."
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Enter a valid email address",
+    "minLength": "Must be at least {{count}} characters",
+    "maxLength": "Must not exceed {{count}} characters",
+    "passwordMismatch": "Passwords do not match"
+  }
+}
