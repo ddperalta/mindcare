@@ -46,3 +46,7 @@ serviceAccountKey.json
 *service-account*.json
 *.pem
 *.key
+
+
+# Claude files
+*CLAUDE.md

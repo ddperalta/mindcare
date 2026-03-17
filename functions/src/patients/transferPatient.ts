@@ -1,4 +1,4 @@
-import * as functions from 'firebase-functions';
+import * as functions from 'firebase-functions/v1';
 import * as admin from 'firebase-admin';
 
 interface TransferRequest {
@@ -27,7 +27,7 @@ export const transferPatient = functions.https.onCall(
     }
 
     // Verify caller is the old therapist
-    const callerRole = context.auth.token.role;
+    const callerRole = context.auth!.token.role;
     if (callerRole !== 'THERAPIST' && callerRole !== 'ADMIN') {
       throw new functions.https.HttpsError(
         'permission-denied',
@@ -35,7 +35,7 @@ export const transferPatient = functions.https.onCall(
       );
     }
 
-    if (callerRole === 'THERAPIST' && context.auth.uid !== oldTherapistId) {
+    if (callerRole === 'THERAPIST' && context.auth!.uid !== oldTherapistId) {
       throw new functions.https.HttpsError(
         'permission-denied',
         'You can only transfer your own patients'
@@ -64,7 +64,7 @@ export const transferPatient = functions.https.onCall(
         patientId,
         oldTherapistId,
         newTherapistId,
-        performedBy: context.auth.uid,
+        performedBy: context.auth!.uid,
         timestamp: admin.firestore.FieldValue.serverTimestamp(),
       });
 

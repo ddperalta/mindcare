@@ -1,4 +1,4 @@
-import * as functions from 'firebase-functions';
+import * as functions from 'firebase-functions/v1';
 import * as admin from 'firebase-admin';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -31,8 +31,8 @@ export const createPatientInvitation = functions.https.onCall(
 
     try {
       const db = admin.firestore();
-      const therapistId = context.auth.uid;
-      const tenantId = context.auth.token.tenantId;
+      const therapistId = context.auth!.uid;
+      const tenantId = context.auth!.token.tenantId;
 
       // Check if patient already exists with this email
       try {
@@ -59,7 +59,7 @@ export const createPatientInvitation = functions.https.onCall(
       await db.collection('patient_invitations').doc(token).set({
         token,
         therapistId,
-        therapistEmail: context.auth.token.email || '',
+        therapistEmail: context.auth!.token.email || '',
         therapistName: therapistData?.displayName || 'Unknown',
         patientEmail,
         patientName: patientName || null,

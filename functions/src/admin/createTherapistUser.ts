@@ -1,4 +1,4 @@
-import * as functions from 'firebase-functions';
+import * as functions from 'firebase-functions/v1';
 import * as admin from 'firebase-admin';
 
 interface CreateTherapistRequest {
@@ -65,7 +65,7 @@ export const createTherapistUser = functions.https.onCall(
         displayName,
         role: 'THERAPIST',
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
-        createdBy: context.auth.uid, // Admin who created
+        createdBy: context.auth!.uid, // Admin who created
         isDeleted: false,
       });
 
@@ -77,7 +77,7 @@ export const createTherapistUser = functions.https.onCall(
         tenantId,
         isVerified: true, // Admin-created = pre-verified
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
-        verifiedBy: context.auth.uid,
+        verifiedBy: context.auth!.uid,
         verifiedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
@@ -91,8 +91,8 @@ export const createTherapistUser = functions.https.onCall(
       // Audit log
       await db.collection('audit_logs').doc('admin').collection('logs').add({
         action: 'CREATE_THERAPIST',
-        performedBy: context.auth.uid,
-        performedByEmail: context.auth.token.email,
+        performedBy: context.auth!.uid,
+        performedByEmail: context.auth!.token.email,
         targetUserId: uid,
         targetEmail: email,
         timestamp: admin.firestore.FieldValue.serverTimestamp(),

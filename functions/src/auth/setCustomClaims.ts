@@ -1,16 +1,16 @@
-import * as functions from 'firebase-functions';
+import * as functions from 'firebase-functions/v1';
 import * as admin from 'firebase-admin';
 
 // Trigger when a new user is created
-export const onUserCreated = functions.auth.user().onCreate(async (user) => {
+export const onUserCreated = functions.auth.user().onCreate(async (authUser) => {
   try {
     const db = admin.firestore();
 
     // Get user document to determine role
-    const userDoc = await db.collection('users').doc(user.uid).get();
+    const userDoc = await db.collection('users').doc(authUser.uid).get();
 
     if (!userDoc.exists) {
-      console.log('User document not found for:', user.uid);
+      console.log('User document not found for:', authUser.uid);
       return;
     }
 
@@ -30,12 +30,12 @@ export const onUserCreated = functions.auth.user().onCreate(async (user) => {
     // If therapist, set as unverified
     if (role === 'THERAPIST') {
       customClaims.isVerified = false;
-      customClaims.tenantId = `tenant_${user.uid}`;
+      customClaims.tenantId = `tenant_${authUser.uid}`;
     }
 
-    await admin.auth().setCustomUserClaims(user.uid, customClaims);
+    await admin.auth().setCustomUserClaims(authUser.uid, customClaims);
 
-    console.log('Custom claims set for user:', user.uid, customClaims);
+    console.log('Custom claims set for user:', authUser.uid, customClaims);
   } catch (error) {
     console.error('Error setting custom claims:', error);
   }

@@ -1,4 +1,4 @@
-import * as functions from 'firebase-functions';
+import * as functions from 'firebase-functions/v1';
 import * as admin from 'firebase-admin';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -58,7 +58,7 @@ export const createUserInvitation = functions.https.onCall(
 
     try {
       const db = admin.firestore();
-      const adminId = context.auth.uid;
+      const adminId = context.auth!.uid;
 
       // Check if user already exists with this email
       try {
@@ -86,7 +86,7 @@ export const createUserInvitation = functions.https.onCall(
         token,
         role,
         invitedBy: adminId,
-        invitedByEmail: context.auth.token.email || '',
+        invitedByEmail: context.auth!.token.email || '',
         invitedByName: adminData?.displayName || 'Admin',
         targetEmail,
         targetName: targetName || null,
